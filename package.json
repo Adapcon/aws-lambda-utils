@@ -1,5 +1,5 @@
 {
-  "name": "aws-lambda-utils",
+  "name": "aws-lambda-utils-js",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

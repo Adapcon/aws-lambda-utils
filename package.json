@@ -6,12 +6,12 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Adapcon/aws-lambda-utils.git"
+    "url": "git+https://github.com/Adapcon/aws-lambda-utils-js.git"
   },
   "author": "pro@adapcon.com.br",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Adapcon/aws-lambda-utils/issues"
+    "url": "https://github.com/Adapcon/aws-lambda-utils-js/issues"
   },
   "homepage": "https://adapcon.com.br",
   "dependencies": {

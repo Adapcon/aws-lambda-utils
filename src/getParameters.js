@@ -1,4 +1,5 @@
 const { get, isObject } = require('deep-object-js');
+const { getBody } = require('./getBody');
 
 const _validateParams = (event, arg) => {
   if (!isObject(event)) throw new Error('Event is not an object');
@@ -37,7 +38,8 @@ const getParameters = (event, arg, defaultValue = null) => {
   try {
     _validateParams(event, arg);
 
-    const { headers, body, pathParameters, queryStringParameters } = event;
+    const { headers, pathParameters, queryStringParameters } = event;
+    const body = getBody(event);
 
     return _get(headers, arg) || _get(body, arg) || _get(queryStringParameters, arg) || _get(pathParameters, arg) || defaultValue;
   } catch (err) {

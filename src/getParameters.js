@@ -1,7 +1,7 @@
-const { get } = require('deep-object-js');
+const { get, isObject } = require('deep-object-js');
 
 const _validateParams = (event, arg) => {
-  if (typeof event !== 'object') throw new Error('Event is not an object');
+  if (!isObject(event)) throw new Error('Event is not an object');
   else if (!arg) throw new Error('Arg is not defined');
   else if (typeof arg != 'string') throw new Error('Arg is not a string');
 }
@@ -45,4 +45,8 @@ const getParameters = (event, arg, defaultValue = null) => {
   }
 }
 
-module.exports = getParameters;
+module.exports = { 
+  getParameters,
+  _get,
+  _validateParams
+};
